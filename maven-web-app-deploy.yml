@@ -4,28 +4,23 @@ kind: Deployment
 metadata:
  name: mavenwebappdeployment
 spec:
- replicas: 2
- selector:
-   matchLabels:
+ replicas: 1
+ strategy: 
+    type: Recreate
+ selector: 
+   matchLabels: 
      app: mavenwebapp
  template:
   metadata:
    name: mavenwebapppod
    labels:
-     app: mavenwebapp
-  spec:
+     app: mavenwebapp	 
+  spec: 
     containers:
     - name: mavenwebappcontainer
       image: ashokit/mavenwebapp
       ports:
       - containerPort: 8080
-      resources:
-        requests:
-         cpu: 200m
-         memory: 1Gi
-        limits:
-         cpu: 500m
-         memory: 2Gi
 ---
 apiVersion: v1
 kind: Service
@@ -38,3 +33,4 @@ spec:
   ports:
    - port: 80
      targetPort: 8080
+...
