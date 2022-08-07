@@ -10,6 +10,11 @@ node{
         sh "${mavenCMD} clean package"
     }
     
+    stage('SonarQube analysis') {       
+        withSonarQubeEnv('Sonar-Server-7.8') {
+       	sh "mvn sonar:sonar"    	
+    }
+    
     stage('Build Image'){
         sh 'docker build -t ashokit/mavenwebapp .'
     }
