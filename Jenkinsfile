@@ -8,13 +8,15 @@ pipeline {
        echo "Building the Project"
       }
     }
-     
-     post{
-         success{
+     script{
+            post{
+                 success{
          
-         emailext body: "Jenkins send the mail", subject: "Test Email", to: "adrija.tina93@gmail.com"
-         }
-     }
+                        emailext body: "Jenkins send the mail", subject: "Test Email", to: "adrija.tina93@gmail.com"
+                        }
+                }
+            }
+     
        
        
     }
