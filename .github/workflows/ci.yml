@@ -18,4 +18,4 @@ jobs:
           java-version: '11'
 
       - name: Build with Maven
-        run: mvn clean install -B
+        run: mvn clean install
