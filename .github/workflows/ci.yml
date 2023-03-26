@@ -1,5 +1,4 @@
-name: Java CI/CD with SonarQube, Docker, Trivy, JFrog, and ArgoCD
-
+name: ci.pipeline
 on:
   push:
     branches:
