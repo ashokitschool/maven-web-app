@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
  name: mavenwebappdeployment
 spec:
- replicas: 1
+ replicas: 2
  strategy: 
     type: Recreate
  selector: 
@@ -27,11 +27,10 @@ kind: Service
 metadata:
  name: mavenwebappsvc
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
    app: mavenwebapp
   ports:
    - port: 80
      targetPort: 8080
-     nodePort: 30736
 ...
