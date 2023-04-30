@@ -18,7 +18,7 @@ spec:
   spec: 
     containers:
     - name: mavenwebappcontainer
-      image: ashokit/mavenwebapp
+      image: akshatakittad/mavenwebapp
       ports:
       - containerPort: 8080
 ---
@@ -27,11 +27,10 @@ kind: Service
 metadata:
  name: mavenwebappsvc
 spec:
-  type: NodePort
+  type: LoadBlancer
   selector:
    app: mavenwebapp
   ports:
    - port: 80
      targetPort: 8080
-     nodePort: 30736
 ...
