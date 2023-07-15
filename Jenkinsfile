@@ -28,10 +28,11 @@ pipeline{
        steps{
         
         withSonarQubeEnv('Sonar-Server-9.9'){
-            withMaven(){
-               sh ' ./mvnw sonar:sonar'
-            }
-           
+            sh '''
+                echo "PATH = ${PATH}"
+                echo "M2_HOME = ${M2_HOME}"
+                mvn sonar:sonar
+            '''
           // def mavenHome = tool name: "Maven-3.9.3", type: "maven"
        // def mavenCMD = "${mavenHome}/bin/mvn"
         //sh "${mavenCMD} sonar:sonar" 
