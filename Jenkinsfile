@@ -11,7 +11,7 @@ pipeline{
      stage('Maven Build'){
        steps{
            withMaven(){
-               sh ' ./mvnw clean package
+               sh ' ./mvnw clean package'
            }
          //sh 'def mavenHome = tool name: "Maven-3.9.3", type: "maven"'
          //sh'def mavenCMD = "${mavenHome}/bin/mvn"'
