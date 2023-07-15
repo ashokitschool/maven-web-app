@@ -13,20 +13,15 @@ pipeline{
      }
      stage('Maven Build'){
        steps{
-            /*sh '''
+            sh '''
                # echo "PATH = ${PATH}"
                # echo "M2_HOME = ${M2_HOME}"
                 mvn clean package
-            '''*/
-         sh '''
-            mavenHome=tool name: "Maven-3.9.3", type: "maven"
-            mavenCMD="${mavenHome}/bin/mvn"
-            ${mavenCMD} clean package
-        '''
+            '''
       }
     }
     
-     stage('Sonar test'){
+     /*stage('Sonar test'){
        steps{
         
         withSonarQubeEnv('Sonar-Server-9.9'){
@@ -40,7 +35,7 @@ pipeline{
         //sh "${mavenCMD} sonar:sonar" 
         }
        }  
-    }
+    }*/
     
     stage('Build Artifact'){
 
