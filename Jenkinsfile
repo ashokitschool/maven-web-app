@@ -21,7 +21,7 @@ pipeline{
       }
     }
     
-     /*stage('Sonar test'){
+     stage('Sonar test'){
        steps{
         
         withSonarQubeEnv('Sonar-Server-9.9'){
@@ -35,7 +35,7 @@ pipeline{
         //sh "${mavenCMD} sonar:sonar" 
         }
        }  
-    }*/
+    }
     
     stage('Build Artifact'){
 
