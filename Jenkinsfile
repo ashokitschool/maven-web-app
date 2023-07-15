@@ -14,8 +14,8 @@ pipeline{
      stage('Maven Build'){
        steps{
             sh '''
-               // echo "PATH = ${PATH}"
-               // echo "M2_HOME = ${M2_HOME}"
+               # echo "PATH = ${PATH}"
+               # echo "M2_HOME = ${M2_HOME}"
                 mvn clean package
             '''
          //sh 'def mavenHome = tool name: "Maven-3.9.3", type: "maven"'
