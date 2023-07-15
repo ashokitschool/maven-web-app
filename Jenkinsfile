@@ -41,7 +41,7 @@ pipeline{
 
       steps{
         
-        nexusArtifactUploader artifacts: [[artifactId: '01-maven-web-app', classifier: '', file: 'target/01-maven-web-app.war', type: 'war']], credentialsId: 'Nexus-ID', groupId: 'in.ashokit', nexusUrl: '13.233.4.124:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'Anuj-Repositry', version: '3.0-SNAPSHOT'
+        nexusArtifactUploader artifacts: [[artifactId: '01-maven-web-app', classifier: '', file: 'target/01-maven-web-app.war', type: 'war']], credentialsId: 'Nexus-ID', groupId: 'in.ashokit', nexusUrl: '13.235.67.235:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'Anuj-Repositry', version: '3.0-SNAPSHOT'
         
     }
     }
