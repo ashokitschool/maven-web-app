@@ -19,7 +19,7 @@ pipeline{
                 mvn clean package
             '''*/
          sh '''
-            mavenHome=tool name: "Maven-3.9.3", type: "maven"'
+            mavenHome=tool name: "Maven-3.9.3", type: "maven"
             mavenCMD="${mavenHome}/bin/mvn"
             ${mavenCMD} clean package
         '''
