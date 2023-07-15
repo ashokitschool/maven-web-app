@@ -3,34 +3,28 @@ pipeline{
     
   stages{
     
-  stage('Clone Repo'){
-
-    steps{
-        
-        git credentialsId: 'GIT-Hub-ID', url: 'https://github.com/anujkumarara123/maven-web-app.git'
-    }
-  }
-    
-    stage('Maven Build'){
-
-      steps{
-        
+     stage('Clone Repo'){
+         steps{
+            git credentialsId: 'GIT-Hub-ID', url: 'https://github.com/anujkumarara123/maven-web-app.git'
+         }
+     }
+     stage('Maven Build'){
+       steps{
         def mavenHome = tool name: "Maven-3.9.3", type: "maven"
         def mavenCMD = "${mavenHome}/bin/mvn"
         sh "${mavenCMD} clean package"
-    }
+      }
     }
     
-    stage('Sonar test'){
-      steps{
+     stage('Sonar test'){
+       steps{
         
         withSonarQubeEnv('Sonar-Server-9.9'){
            def mavenHome = tool name: "Maven-3.9.3", type: "maven"
         def mavenCMD = "${mavenHome}/bin/mvn"
         sh "${mavenCMD} sonar:sonar" 
-            
         }
-        
+       }  
     }
     
     stage('Build Artifact'){
