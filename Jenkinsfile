@@ -26,6 +26,13 @@ pipeline{
                    mavenBuild()
             
                                }
-}
+    }
+
+        stage('Build Docker Image'){
+            steps{
+            sh 'docker built -t anujkumarara123/my-app:2.0 .'
+                  }
+
+        }
 }
 }
