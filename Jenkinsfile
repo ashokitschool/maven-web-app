@@ -7,6 +7,10 @@ pipeline{
         
         maven 'Maven-3.9.4'
     }
+    environment{
+
+        def dockerRun = 'docker run -p 8080:8080 -d -name my-dev-app anujkumarara123/my-app:2.0'
+    }
     
     stages{
         
@@ -42,6 +46,17 @@ pipeline{
                 sh 'docker push anujkumarara123/my-app:2.0'
 }
 }
+        stage ('Run Container on Dev Server')
+        {
+            steps{
+                
+                sshagent(['Dev-Server']) {
+   sh "ssh -o StrictHostKeyChecking=no ec2-user@3.108.60.145 ${dockerRun}"
+}
+                
     }
 }
+    }
+}
+
 
