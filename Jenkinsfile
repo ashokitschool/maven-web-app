@@ -9,7 +9,7 @@ pipeline{
     }
     environment{
 
-        def dockerRun = 'docker run -p 8080:8080 -d --name my-dev-app anujkumarara123/my-app:2.0'
+        def dockerRun = 'docker run -p 8080:80 -d --name my-dev-app anujkumarara123/my-app:2.0'
     }
     
     stages{
