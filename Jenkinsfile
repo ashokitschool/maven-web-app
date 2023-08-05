@@ -1,3 +1,4 @@
+@Library("my-shared-library) _
 pipeline{
     
     agent any
@@ -22,8 +23,8 @@ pipeline{
     stage("Build Code") {
         
         steps{
-                    echo "My name is Anuj Kumar"
-                          sh 'mvn clean package'
+                   mavenBuild()
+            
                                }
 }
 }
