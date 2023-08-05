@@ -34,5 +34,14 @@ pipeline{
                   }
 
         }
+        stage("Push Image to Hub"){
+            steps{
+                withCredentials([string(credentialsId: 'Docker-ID', variable: 'docckerhub-cred')]) {
+                sh 'docker login -u anujkumarara123 -p ${docckerhub-cred}'
+}
+                sh 'docker push anujkumarara123/my-app:2.0'
 }
 }
+    }
+}
+
