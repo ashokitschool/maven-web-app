@@ -9,7 +9,7 @@ pipeline{
     }
     environment{
 
-        def dockerRun = 'docker run -p 8081:80 -d --name my-dev-app2 anujkumarara123/my-app:2.0'
+        def dockerRun = 'docker run -p 8080:80 -d --name my-dev-app2 anujkumarara123/my-app:2.0'
     }
     
     stages{
@@ -51,7 +51,7 @@ pipeline{
             steps{
                 
                 sshagent(['Dev-Server']) {
-   sh "ssh -o StrictHostKeyChecking=no ec2-user@3.108.60.145 ${dockerRun}"
+   sh "ssh -o StrictHostKeyChecking=no ec2-user@52.66.197.101 ${dockerRun}"
 }
                 
     }
