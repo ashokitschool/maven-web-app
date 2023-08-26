@@ -1,3 +1,6 @@
+
+
+
 node{
     
     stage('Clone repo'){
@@ -33,22 +36,15 @@ node{
 		version: '1.0.0'
 	}
 }
-    
-    stage('Build Image'){
-        sh 'docker build -t ashokit/mavenwebapp .'
-    }
-    
-    stage('Push Image'){
-        withCredentials([string(credentialsId: 'DOCKER-CREDENTIALS', variable: 'DOCKER_CREDENTIALS')]) {
-            sh 'docker login -u ashokit -p ${DOCKER_CREDENTIALS}'
-        }
-        sh 'docker push ashokit/mavenwebapp'
-    }
-    
-    stage('Deploy App'){
-        kubernetesDeploy(
-            configs: 'maven-web-app-deploy.yml',
-            kubeconfigId: 'Kube-Config'
-        )
-    }    
+
+
+
+stage('Deploy'){
+ sshagent(['Tomcat-Server-Agent']) {
+   sh 'scp -o StrictHostKeyChecking=no target/01-maven-web-app.war
+   ec2-user@3.145.4.210:/home/ec2-user/apache-tomcat-9.0.65/webapps'  
+}
+
+}
+
 }
