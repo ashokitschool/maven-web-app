@@ -1,3 +1,5 @@
-<%
-  int i = 10
-%>
+<html>  
+<body> 
+<% out.print("welcome to jsp") %>  
+</body>  
+</html> 
