@@ -7,3 +7,4 @@
       remote_user: ansadmin
     - name: build docker image
       command: sudo docker build -t webapp .
+      remote_user: ansadmin
