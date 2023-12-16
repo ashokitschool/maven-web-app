@@ -4,6 +4,6 @@
   become: true
   tasks:
     - name: build docker image
-      command: sudo docker build -t webapp .
+      command: docker build -t webapp .
     - name : tag image
-      command: sudo docker tag webapp ashokit/mavenwebapp
+      command: docker tag webapp ashokit/mavenwebapp
