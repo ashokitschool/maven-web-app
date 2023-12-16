@@ -4,4 +4,4 @@
   tasks:
     - name: Ping All Host Nodes
       ping:
-      remote_user: ansible
+      remote_user: ansadmin
