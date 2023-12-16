@@ -1,6 +1,6 @@
 # Write a playbook to ping all host nodes
 ---
-- hosts: all
+- hosts: localhost
   tasks:
     - name: Ping All Host Nodes
       ping:
