@@ -18,7 +18,7 @@ spec:
   spec: 
     containers:
     - name: mavenwebappcontainer
-      image: ashokit/mavenwebapp
+      image: maven-web-appimage
       imagePullPolicy: Always
       ports:
       - containerPort: 8080
