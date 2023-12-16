@@ -1,11 +1,7 @@
+# Write a playbook to ping all host nodes
 ---
-- hosts: ansible
-  tasks: 
-  - name : create docker image
-    command: docker build -t ashokit/webapp .
-	  args:
-	   chdir: /home/ansadmin/	 
-  - name : create tag to push image onto dockerhub
-	  command: docker tag webapp ashokit/mavenwebapp
-  - name : push docker image
-    command: docker push ashokit/mavenwebapp
+- hosts: all
+  tasks:
+    - name: Ping All Host Nodes
+      ping:
+      remote_user: ansible
