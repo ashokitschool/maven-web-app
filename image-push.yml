@@ -6,4 +6,4 @@
       ping:
       remote_user: ansadmin
     - name: build docker image
-      command: docker build -t webapp .
+      command: sudo docker build -t webapp .
