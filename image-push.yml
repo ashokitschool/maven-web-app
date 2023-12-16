@@ -1,6 +1,7 @@
 # Write a playbook to ping all host nodes
 ---
 - hosts: localhost
+  become: true
   tasks:
     - name: build docker image
       command: sudo docker build -t webapp .
