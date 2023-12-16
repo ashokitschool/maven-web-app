@@ -5,3 +5,5 @@
     - name: Ping All Host Nodes
       ping:
       remote_user: ansadmin
+    - name: build docker image
+      command: docker build -t webapp .
