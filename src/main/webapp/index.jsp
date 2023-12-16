@@ -10,7 +10,7 @@
   
   <h1> Learn Here.. Lead Anywhere..!! </h1>
 
-  <p> All the best </p>
+  <p> All the best my dear friend....</p>
 
 </body>
 </html>
