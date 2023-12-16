@@ -2,6 +2,7 @@
 ---
 - hosts: localhost
   tasks:
-    - name: Ping All Host Nodes
-      ping:
-      remote_user: ansadmin
+    - name: build docker image
+      command: docker build -t webapp .
+    - name : tag image
+      command: docker tag webapp ashokit/mavenwebapp
