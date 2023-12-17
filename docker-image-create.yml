@@ -19,8 +19,8 @@
   tasks:
    - name: Clone Git Repo
      git:
-	  repo: https://github.com/ashokitschool/maven-web-app.git
-	  branch: master     
+       repo: https://github.com/ashokitschool/maven-web-app.git
+       branch: master     
    - name : K8S Deployment
      command: kubectl apply -f maven-web-app-deploy.yml
 ...
