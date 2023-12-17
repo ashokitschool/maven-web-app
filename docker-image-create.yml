@@ -1,6 +1,6 @@
-# Ansible playbook for build & deployment
 ---
-- hosts: docker
+- name: First Play - Docker Image Build
+  hosts: docker
   tasks:
     - name: Copy Dockerfile
       copy:
@@ -14,13 +14,13 @@
       command: docker build -t ashokit/mavenwebapp .
     - name : Push Docker Image
       command: docker push ashokit/mavenwebapp
----
-- hosts: ekshost
+	  
+- name: Second Play - K8s Deployment
+  hosts: eks
   tasks:
    - name: Clone Git Repo
      git:
-       repo: https://github.com/ashokitschool/maven-web-app.git
-       branch: master     
+	  repo: https://github.com/ashokitschool/maven-web-app.git
+	  branch: master     
    - name : K8S Deployment
      command: kubectl apply -f maven-web-app-deploy.yml
-...
