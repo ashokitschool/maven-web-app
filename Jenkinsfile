@@ -24,7 +24,7 @@ pipeline {
             steps{
                steps {
                 	script {
-                		sh 'ansible-playbook docker-image-create.yml'
+                		sh 'ansible-playbook task.yml'
                 	}
                 }
             }
