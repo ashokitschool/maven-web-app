@@ -18,6 +18,7 @@
   hosts: eks
   tasks:
    - name: Clone Git Repo
-     git: https://github.com/ashokitschool/maven-web-app.git
+     git: 
+	     repo: https://github.com/ashokitschool/maven-web-app.git
    - name : K8S Deployment
      command: kubectl apply -f maven-web-app-deploy.yml
