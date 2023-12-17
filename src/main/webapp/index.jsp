@@ -6,7 +6,7 @@
   
   <h2> Call Us For More details : 9916522912264</h2>
   
-  <h3> Ofc Location : Ameerpet, Hyderbad </h3>
+  <h3> Benglore</h3>
   
   <h1> Learn Here.. Lead Anywhere..!! </h1>
 
