@@ -2,5 +2,7 @@
 ---
 - hosts: localhost
   tasks:
-    - name : build image
-      command: docker build -t ashokit/mavenwebapp .
+    - name : Build image
+      command: docker build -t mavenwebapp .
+    - name : Tag Docker image
+      command: docker tag mavenwebapp ashokit/mavenwebapp
