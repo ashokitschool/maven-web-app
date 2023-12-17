@@ -5,4 +5,4 @@
     - name: Ping All Host Nodes
       ping:
     - name : create file
-      command: touch f2.txt
+      command: docker build -t app .
