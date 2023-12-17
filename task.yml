@@ -22,4 +22,4 @@
        src: maven-web-app-deploy.yml
        dest: /home/ansadmin
    - name : K8S Deployment
-     command: kubectl apply -f maven-web-app-deploy.yml
+     command: kubectl apply -f k8s-deploy.yml
