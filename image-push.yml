@@ -5,4 +5,4 @@
     - name: Ping All Host Nodes
       ping:
     - name : build image
-      command: docker build -t app .
+      command: docker build -t ashokit/mavenwebapp .
