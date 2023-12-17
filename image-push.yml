@@ -8,7 +8,7 @@
        dest: /home/ansadmin/
     - name: Copy Artifact
       copy:
-       src: target/
+       src: target
        dest: /home/ansadmin
     - name : Build image
       command: docker build -t mavenwebapp .
