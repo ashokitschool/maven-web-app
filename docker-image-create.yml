@@ -1,4 +1,4 @@
-# Write a playbook to ping all host nodes
+# Ansible playbook for build & deployment
 ---
 - hosts: docker
   tasks:
