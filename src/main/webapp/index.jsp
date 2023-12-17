@@ -4,7 +4,7 @@
 
 <a href="https://ashokitech.com/online-training-schedules">Click Here To See Your Update</a>
   
-  <h2> Call Us For More details : 100-100-100-100</h2>
+  <h2> Call Us For More details : 9916522912264</h2>
   
   <h3> Ofc Location : Ameerpet, Hyderbad </h3>
   
