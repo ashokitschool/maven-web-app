@@ -6,5 +6,3 @@
       command: docker build -t mavenwebapp .
     - name : Tag Docker image
       command: docker tag mavenwebapp ashokit/mavenwebapp
-    - name: Push Docker Image
-      command: docker push ashokit/mavenwebapp
