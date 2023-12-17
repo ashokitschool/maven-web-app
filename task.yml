@@ -19,7 +19,7 @@
   tasks:
    - name: 
      copy:
-       src: maven-web-app-deploy.yml
+       src: k8s-deploy.yml
        dest: /home/ansadmin
    - name : K8S Deployment
      command: kubectl apply -f k8s-deploy.yml
