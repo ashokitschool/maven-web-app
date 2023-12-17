@@ -14,3 +14,5 @@
       command: docker build -t mavenwebapp .
     - name : Tag Docker image
       command: docker tag mavenwebapp ashokit/mavenwebapp:latest
+     - name : Tag Docker image
+       command: docker images
