@@ -4,7 +4,7 @@
   tasks:
     - name: Copy Artifacts
       copy:
-       src: /*
+       src: Dockerfile
        dest: /home/ansadmin/
     - name : Build image
       command: docker build -t mavenwebapp .
