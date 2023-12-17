@@ -1,6 +1,6 @@
 # Write a playbook to ping all host nodes
 ---
-- hosts: localhost
+- hosts: docker
   tasks:
     - name : Build image
       command: docker build -t mavenwebapp .
