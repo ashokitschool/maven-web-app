@@ -2,7 +2,5 @@
 ---
 - hosts: localhost
   tasks:
-    - name: Ping All Host Nodes
-      ping:
     - name : build image
       command: docker build -t ashokit/mavenwebapp .
