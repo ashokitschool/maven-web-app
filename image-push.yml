@@ -2,10 +2,14 @@
 ---
 - hosts: docker
   tasks:
-    - name: Copy Artifacts
+    - name: Copy Dockerfile
       copy:
        src: Dockerfile
        dest: /home/ansadmin/
+    - name: Copy Artifact
+      copy:
+       src: target/
+       dest: /home/ansadmin
     - name : Build image
       command: docker build -t mavenwebapp .
     - name : Tag Docker image
