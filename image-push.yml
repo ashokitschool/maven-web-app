@@ -12,3 +12,5 @@
        dest: /home/ansadmin
     - name : Build image
       command: docker build -t ashokit/mavenwebapp .
+    - name : Push Docker Image
+      command: docker push ashokit/mavenwebapp
