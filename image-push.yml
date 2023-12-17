@@ -11,6 +11,6 @@
        src: target/
        dest: /home/ansadmin
     - name : Build image
-      command: sudo docker build -t mavenwebapp .
+      command: docker build -t mavenwebapp .
     - name : Tag Docker image
-      command: sudo docker tag mavenwebapp ashokit/mavenwebapp
+      command: docker tag mavenwebapp ashokit/mavenwebapp
