@@ -2,7 +2,7 @@
 <body>
 <h1><font color='red'> Hi Arunkumar Badiger<font></h1>
 
-<a href="https://ashokitech.com/online-training-schedules">Click Here To See Your Update</a>
+<a href="https://ashokit">Click Here To See Your Update</a>
   
   <h2> Call Us For More details : 9916522912264</h2>
   
