@@ -1,0 +1,24 @@
+node{
+    stage('Clone Repo') {
+            git branch: 'master', credentialsId: 'git', url: 'https://github.com/AthulKrishna1712/maven-web-app.git'
+        }
+        
+        stage('Maven Build') {
+            def mavenHome = tool name: "maven3", type: "maven"
+            def mavenCMD = "${mavenHome}/bin/mvn"
+            sh "${mavenCMD} clean package"
+        }
+        
+        stage('Sonarqube-Analysis') {
+            withSonarQubeEnv(credentialsId: 'sonarqube_token') {
+                sh "mvn clean verify sonar:sonar \
+                -Dsonar.projectKey=Demo \
+                -Dsonar.host.url=http://3.12.8.101:9000 \
+                -Dsonar.login=sqp_b7769d6b3c0120435e88a473158587b68e56f2c3"
+            }
+        }
+        
+        stage('Deploy to Tomcat') {
+            deploy adapters: [tomcat9(credentialsId: 'tomcat_deployer', path: '', url: 'http://3.12.8.101:8080/')], contextPath: 'maven-web-app.war', war: '**/*.war'
+        }
+}
