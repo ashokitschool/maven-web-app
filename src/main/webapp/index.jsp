@@ -1,6 +1,6 @@
 <html>
 <body>
-<h1><font color='red'> Welcome to Sandy Illumuniation Technology Co Ltd <font></h1>
+<h1><font color='red'> Welcome to Siri Illumuniation Technology Co Ltd <font></h1>
 
 <a>Illumination Technology Company</a>
   
