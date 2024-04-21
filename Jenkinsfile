@@ -5,6 +5,8 @@ agent any
   tools{
         
       maven 'Maven-3.9.4'
+    SonarQube Scanner 'SonarQube-Server'
+    SonarQube Scanner 5.0.0.2966
     }
 
 stages{
@@ -19,5 +21,11 @@ checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfig
 mavenBuild()
  }
  }
+  stage("Scanning")
+        {
+          steps{
+            sh sonar:sonar
 }
 }
+        }
+        }
