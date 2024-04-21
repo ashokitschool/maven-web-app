@@ -1,3 +1,4 @@
+@Library("my-shared-library") _
 pipeline
 {
 agent any
@@ -15,7 +16,7 @@ checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfig
 }
  stage("Build Code") { 
    steps{
-sh 'mvn clean package'
+mavenBuild()
  }
  }
 }
