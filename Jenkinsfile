@@ -1,6 +1,11 @@
 pipeline
 {
 agent any
+  tools{
+        
+      maven 'Maven-3.9.4'
+    }
+
 stages{
 stage("Pull source code from Github"){
 steps{
@@ -8,5 +13,10 @@ steps{
 checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'Jenkins-ID', url: 'https://github.com/anujkumarara123/maven-web-app.git']])
 }
 }
+ stage("Build Code") { 
+   steps{
+sh 'mvn clean package'
+ }
+ }
 }
 }
