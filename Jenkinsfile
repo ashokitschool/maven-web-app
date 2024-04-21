@@ -1,6 +1,6 @@
-agent any
+pipeline
 {
-
+agent any
 stages{
 stage("Pull source code from Github){
 steps{
