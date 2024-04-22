@@ -4,7 +4,7 @@
 
 <a>Illumination Technology Company</a>
   
-  <h2> Call Us : + 9908410539</h2>
+  <h2> Call Us : + 7793943903</h2>
   
   <h3> Ofc Location : Bye Pass Road, Kaikaluru </h3>
 
