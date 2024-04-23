@@ -2,7 +2,7 @@
 <body>
 <h1><font color='red'> Welcome to Siri Illumuniation Technology Co Ltd <font></h1>
 
-<a>Illumination Technology Company</a>
+<a>Illumination Technology Co PVT LTD</a>
   
   <h2> Call Us : + 7793943903 </h2>
   
