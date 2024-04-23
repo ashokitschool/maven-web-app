@@ -3,7 +3,7 @@ name: CI/CD for Java Maven Web Application
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
