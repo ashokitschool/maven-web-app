@@ -4,20 +4,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
-    matrix: 
+      matrix: 
         java-version: [11, 12]
 
-  steps:
-    -name: Checkout code
-     uses: actions/checkout@v2
-    
-    -name: Setup JDK
-     uses: actions/setup-java@v4
-     with:
-      java-version: '${{ matrix.java-version }}'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    -name: Setup Maven
-     run: mvn clean package
+      - name: Setup JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '${{ matrix.java-version }}'
 
-    -name: Test Maven
-     run: mvn test
+      - name: Setup Maven
+        run: mvn clean package
+
+      - name: Test Maven
+        run: mvn test
