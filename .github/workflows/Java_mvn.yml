@@ -10,7 +10,7 @@ jobs:
 			matrix: 
 			java-version: [11,12]
 		
-		Steps:
+		steps:
 			-name: Checkout code
 			 uses: actions/checkout@v2
 		
