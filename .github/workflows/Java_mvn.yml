@@ -1,4 +1,4 @@
-name: My First Github Action
+ name: My First Github Action
 
 on: [push]
 
@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        java-version: [11,12]
+        java-version: [11, 12]
 
     steps:
       - name: Checkout code
