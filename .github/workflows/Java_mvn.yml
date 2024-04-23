@@ -1,27 +1,23 @@
-name: Java MVN Action File
-
+name: Java with Maven
 on: [push]
-
 jobs:
-	build:
-		runs-on: ubuntu-latest
-		
-		strategy:
-			matrix: 
-				java-version: [11,12]
-		
-		Steps:
-			-name: Checkout code
-			 uses: actions/checkout@v2
-		
-			-name: Setup JDK 11
-			 uses: actions/setup-java@v4
-			 with:
-				java-version: '$ {{ matrix.java-version }}'
-		
-			-name: Build the Code
-			 run: mvn clean package
-		 
-			-name: Test Code
-			 run: mvn test
-		
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+    matrix: 
+        java-version: [11, 12]
+
+  steps:
+    -name: Checkout code
+     uses: actions/checkout@v2
+    
+    -name: Setup JDK
+     uses: actions/setup-java@v4
+     with:
+      java-version: '${{ matrix.java-version }}'
+
+    -name: Setup Maven
+     run: mvn clean package
+
+    -name: Test Maven
+     run: mvn test
