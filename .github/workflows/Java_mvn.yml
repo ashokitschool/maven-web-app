@@ -8,16 +8,16 @@ jobs:
 		
 		strategy:
 			matrix: 
-			java-version: [11,12]
+				java-version: [11,12]
 		
-		steps:
+		Steps:
 			-name: Checkout code
 			 uses: actions/checkout@v2
 		
-			-name: Setup JDK 11, 12
+			-name: Setup JDK 11
 			 uses: actions/setup-java@v4
-				with:
-					java-version: $ {{ matrix.java-version }}
+			 with:
+				java-version: '$ {{ matrix.java-version }}'
 		
 			-name: Build the Code
 			 run: mvn clean package
