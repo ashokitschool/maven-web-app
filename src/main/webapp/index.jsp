@@ -8,7 +8,7 @@
   
   <h3> Our Ofc Location : Ameerpet, Hyderbad </h3>
 
-<h1> INDIA </h3>
+<h1> INDIA </h1>
 
 </body>
 </html>
