@@ -1,13 +1,10 @@
-pipeline {
-  
+pipeline {  
     agent {
         label 'Ansible-Node'
-    }
-    
+    }    
     tools{
         maven "Maven-3.9.6"
     }
-
     stages {
         stage('Clone') {
             steps {
@@ -18,8 +15,7 @@ pipeline {
             steps {
                sh 'mvn clean package'
             }
-        }
-        
+        }        
         stage('Create Image'){
             steps{
                steps {
