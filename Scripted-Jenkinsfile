@@ -1,7 +1,7 @@
 node {
     def mvnPath
     
-    stage('git clone') {
+    stage('git clone process') {
         git 'https://github.com/ashokitschool/maven-web-app.git'
     }
     
