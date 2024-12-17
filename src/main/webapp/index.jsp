@@ -91,7 +91,7 @@
 </head>
 <body>
     <header>
-        <h1>VLY Lorry Transport Service</h1>
+        <h1>Bhanu Lorry Transport Service</h1>
     </header>
     <div class="container">
         <nav>
