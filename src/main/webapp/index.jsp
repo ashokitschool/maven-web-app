@@ -5,110 +5,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Website</title>
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Top header */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header styling */
         .header {
-            position: fixed;
+            position: sticky;
             top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #333;
+            background-color: #2c3e50;
             color: white;
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
             font-size: 24px;
             z-index: 1000;
         }
 
-        /* Left menu */
-        .menu {
+        /* Sidebar menu styling */
+        .sidebar {
             position: fixed;
-            top: 50px; /* Leave space for header */
+            top: 80px; /* Below header */
             left: 0;
             width: 200px;
-            height: calc(100% - 50px); /* Full height minus header */
+            height: calc(100% - 80px); /* Full height minus header */
             background-color: #f4f4f4;
             border-right: 1px solid #ccc;
-            overflow-y: auto;
-            padding: 20px;
+            padding-top: 20px;
         }
 
-        .menu a {
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
             display: block;
-            padding: 10px;
+            padding: 10px 15px;
             color: #333;
             text-decoration: none;
-            margin-bottom: 10px;
             border-radius: 5px;
+            transition: background 0.3s;
         }
 
-        .menu a:hover {
+        .sidebar ul li a:hover {
             background-color: #ddd;
         }
 
-        /* Main content */
+        /* Main content styling */
         .content {
-            margin-left: 220px; /* Space for the menu */
+            margin-left: 220px; /* Leave space for sidebar */
             padding: 20px;
-            flex: 1;
         }
 
-        /* Sample content styles */
-        .content h1 {
-            color: #333;
+        .content section {
+            margin-bottom: 50px;
+        }
+
+        .content h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
         }
 
         .content p {
             line-height: 1.6;
         }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: static;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+        }
     </style>
 </head>
 <body>
+
     <!-- Header -->
     <div class="header">
         My Business Name
     </div>
 
-    <!-- Left Menu -->
-    <div class="menu">
-        <a href="#about-us">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#products">Products</a>
-        <a href="#contact-us">Contact Us</a>
+    <!-- Sidebar Menu -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+        </ul>
     </div>
 
     <!-- Main Content -->
     <div class="content">
-        <h1>Welcome to My Business</h1>
-        <p>
-            Here is a brief introduction about my business. Scroll through the menu on the left 
-            to explore more about us, our services, and how to contact us.
-        </p>
+        <section id="about-us">
+            <h2>About Us</h2>
+            <p>
+                We are a leading business providing quality products and services to our customers.
+                Our focus is on innovation and excellence.
+            </p>
+        </section>
 
-        <h2 id="about-us">About Us</h2>
-        <p>
-            We are a passionate team dedicated to delivering the best products and services.
-        </p>
+        <section id="services">
+            <h2>Services</h2>
+            <p>
+                Explore our wide range of services designed to meet your needs. We specialize in
+                delivering the best solutions for your business.
+            </p>
+        </section>
 
-        <h2 id="services">Services</h2>
-        <p>
-            We offer a wide range of services tailored to meet your needs.
-        </p>
+        <section id="products">
+            <h2>Products</h2>
+            <p>
+                Our products are crafted with precision and care to ensure the highest quality.
+                Browse through our catalog for the latest offerings.
+            </p>
+        </section>
 
-        <h2 id="products">Products</h2>
-        <p>
-            Check out our amazing products designed for efficiency and value.
-        </p>
-
-        <h2 id="contact-us">Contact Us</h2>
-        <p>
-            Feel free to reach out to us through our contact form or email.
-        </p>
+        <section id="contact-us">
+            <h2>Contact Us</h2>
+            <p>
+                Feel free to reach out to us. Whether you have questions or need assistance,
+                we’re here to help.
+            </p>
+        </section>
     </div>
+
 </body>
 </html>
