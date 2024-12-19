@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: likhitha-deployment
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: likhitha
+  template:
+    metadata:
+      labels:
+        app: likhitha
+    spec:
+      containers:
+      - name: likhitha-container
+        image: bhanu3023/likhitha:latest
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: likhitha-service
+  namespace: default
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: likhitha
+===============================
+
+
+
