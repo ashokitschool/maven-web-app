@@ -6,7 +6,7 @@
   
   <h2> Call Us : +91-9985396677 , +91-123012304  </h2>
   
-  <h3> Our Ofc Location : Ameerpet, Hyderbad </h3>
+  <h3> Our Ofc Location : Ameerpet, Hyderbad , Bhubaneswar </h3>
 
 </body>
 </html>
