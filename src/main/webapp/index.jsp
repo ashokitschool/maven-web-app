@@ -1,6 +1,6 @@
 <html>
 <body>
-<h1><font color='green'> Welcome to Ashok IT - Leading Software Training Institute <font></h1>
+<h1><font color='blue'> Welcome to Ashok IT - Leading Software Training Institute <font></h1>
 
 <a href="www.ashokit.in">Click Here To See Ashok IT Training Schedules</a>
   
@@ -8,6 +8,6 @@
   
   <h3> Our Ofc Location : Ameerpet, Hyderbad, INDIA </h3>
 
-  <h4><font color='red'> LEARN HERE LEAD ACROSS THE WORLD <font></h4>
+  <h7><font color='yellow'> LEARN HERE LEAD ACROSS THE WORLD <font></h7>
 </body>
 </html>
