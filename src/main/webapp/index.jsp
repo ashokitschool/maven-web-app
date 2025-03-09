@@ -8,6 +8,6 @@
   
   <h3> Our Ofc Location : Ameerpet, Hyderbad, INDIA </h3>
 
-  <h4><font color='red'> LEARN HERE LEAD ACROSS THE WORLD <font></h4>
+  <h6><font color='blue'> LEARN HERE LEAD ACROSS THE WORLD <font></h6>
 </body>
 </html>
