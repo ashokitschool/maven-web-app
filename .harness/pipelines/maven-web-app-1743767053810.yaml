@@ -20,12 +20,17 @@ pipeline:
           execution:
             steps:
               - step:
-                  identifier: echo
-                  name: echo
-                  spec:
-                    command: echo hello world
-                  timeout: ""
+                  identifier: maven_build
+                  name: Build WAR File
                   type: Run
+                  spec:
+                    shell: Sh
+                    image: maven:3.8-jdk-11
+                    connectorRef: account.harnessImage
+                    command: |
+                      mvn clean package
+                      echo "Listing files in target directory:"
+                      ls -l target
               - step:
                   identifier: dockerbuild
                   name: docker_build
