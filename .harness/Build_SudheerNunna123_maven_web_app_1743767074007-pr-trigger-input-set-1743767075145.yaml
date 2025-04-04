@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_SudheerNunna123_maven_web_app_1743767074007-pr-trigger-input-set
+  identifier: Build_SudheerNunna123_maven_web_app_1743767074007prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_SudheerNunna123_maven_web_app_1743767074007
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
