@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_SudheerNunna123_maven_web_app_1743767074007-push-trigger-input-set
+  identifier: Build_SudheerNunna123_maven_web_app_1743767074007pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_SudheerNunna123_maven_web_app_1743767074007
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
