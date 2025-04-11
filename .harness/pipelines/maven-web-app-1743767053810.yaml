@@ -36,7 +36,7 @@ pipeline:
                   name: docker_build
                   spec:
                     caching: true
-                    connectorRef: account.Docker_Registry
+                    connectorRef: docker_registry
                     repo: sudheernunna/maven-web-app
                     tags:
                       - latest
