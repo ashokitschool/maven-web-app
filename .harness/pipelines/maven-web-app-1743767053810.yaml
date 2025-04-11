@@ -37,7 +37,7 @@ pipeline:
                   spec:
                     caching: true
                     connectorRef: <+input>
-                    repo: sudheernunna/maven-web-app
+                    repo: sudheer123143/maven-web-app
                     tags:
                       - latest
                   timeout: ""
