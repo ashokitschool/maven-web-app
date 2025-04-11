@@ -36,7 +36,7 @@ pipeline:
                   name: docker_build
                   spec:
                     caching: true
-                    connectorRef: dockerhub_sudheer
+                    connectorRef: <+input>
                     repo: sudheernunna/maven-web-app
                     tags:
                       - latest
