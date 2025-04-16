@@ -3,6 +3,7 @@ pipeline:
   name: Build maven-web-app
   orgIdentifier: default
   projectIdentifier: default_project
+  tags: {}
   properties:
     ci:
       codebase:
