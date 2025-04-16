@@ -49,9 +49,9 @@ pipeline:
             spec: {}
             type: Cloud
         type: CI
-  variables:
-    - name: release_tag
-      type: String
-      description: ""
-      required: true
-      value: <+input>
+        variables:
+          - name: release_tag
+            type: String
+            description: ""
+            required: true
+            value: <+input>
