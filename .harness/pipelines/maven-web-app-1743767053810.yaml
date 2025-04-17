@@ -3,12 +3,6 @@ pipeline:
   name: Build maven-web-app
   orgIdentifier: default
   projectIdentifier: default_project
-  tags:
-    release: <+pipeline.variables.release_label>
-  variables:
-    - name: release_label
-      type: String
-      value: <+input>
   properties:
     ci:
       codebase:
