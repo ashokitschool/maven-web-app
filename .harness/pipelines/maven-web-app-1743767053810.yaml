@@ -6,9 +6,12 @@ pipeline:
   properties:
     ci:
       codebase:
-        build: <+input>
         connectorRef: account.Github
         repoName: SudheerNunna123/maven-web-app
+        build:
+          type: tag
+          spec:
+            tag: <+input>
   stages:
     - stage:
         identifier: build
