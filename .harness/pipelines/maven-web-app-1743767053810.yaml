@@ -42,7 +42,7 @@ pipeline:
                     connectorRef: <+input>
                     repo: sudheer123143/maven-web-app
                     tags:
-                      - latest
+                      - <+codebase.tag>
                   timeout: ""
                   type: BuildAndPushDockerRegistry
           platform:
