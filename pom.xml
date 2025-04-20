@@ -17,7 +17,7 @@
    
   </dependencies>
   <build>
-    <finalName>maven-web-app</finalName>
+    <finalName>javaapp</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
