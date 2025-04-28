@@ -8,10 +8,7 @@ pipeline:
       codebase:
         connectorRef: account.Github
         repoName: SudheerNunna123/maven-web-app
-        build:
-          type: tag
-          spec:
-            tag: <+input>
+        build: <+input>
   stages:
     - stage:
         identifier: build
