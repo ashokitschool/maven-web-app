@@ -6,9 +6,9 @@ jobs:
     steps:
       - name: checkout the code
         uses: actions/checkout@v4
-      - name: install maven
+      - name: install maven in server
         uses: "stCarolas/setup-maven@v5"
-        run: "mvn clean"
+        run: mvn clean
 
   build:
     runs-on: ubuntu-latest
