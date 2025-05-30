@@ -1,0 +1,13 @@
+name: mavenbuild
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout the code
+        uses: actions/checkout@v4
+      - name: install maven
+        uses: "stCarolas/setup-maven@v5"
+      - name: build and compile
+        run: mvn clean
+
