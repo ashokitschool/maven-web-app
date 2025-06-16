@@ -10,9 +10,9 @@
   <h3> Ofc Location : Vitthai bhavan, Chalisgaon </h3>
 <h2> I will Guid you How to learn Devops tools <h2>
 
-  <h2> Call Us : +91-9985396677  </h2>
+  <h2> Call Us : +91-9503850254  </h2>
   
-  <h3> Our Ofc Location : Ameerpet, Hyderbad </h3>
+  <h3> Our Office Location : Ameerpet, Hyderbad </h3>
 
 
 </body>
