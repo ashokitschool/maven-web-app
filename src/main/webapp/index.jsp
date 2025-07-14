@@ -8,5 +8,8 @@
   
   <h3> Our Ofc Location : Ameerpet, Hyderbad </h3>
 
+<h4> feedback </h4>
+<p> He is a very good trainer i saw his videos he was giving very neat and clear explanation about concepts </p> 
+
 </body>
 </html>
