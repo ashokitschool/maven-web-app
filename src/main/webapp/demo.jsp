@@ -1,5 +1,5 @@
 <html>  
 <body> 
-<% out.print("welcome to jsp") %>  
+<% out.print("welcome to GIt") %>  
 </body>  
 </html> 
