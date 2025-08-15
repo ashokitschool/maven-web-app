@@ -1,19 +1,28 @@
-pipeline {  
-
+pipeline {
     agent any
-        
+    
     tools{
-        maven "Maven-3.9.9"
+        maven 'Maven-3.9.9'
     }
     stages {
-        stage('Clone') {
+        stage('clone') {
             steps {
-               git 'https://github.com/ashokitschool/maven-web-app.git'
+              git 'https://github.com/ashokitschool/maven-web-app.git'
             }
         }
-        stage('Build') {
+        stage('build'){
+            steps{
+                 sh 'mvn clean package'
+            }
+        }
+        stage('docker image'){
             steps {
-               sh 'mvn clean package'
+                sh 'docker build -t ashokit/mavenwebapp .'
+            }
+        }
+        stage('k8s deploy'){
+            steps{
+               sh 'kubectl apply -f k8s-deploy.yml'
             }
         }
     }
